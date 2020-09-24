@@ -20,10 +20,16 @@ Terminal commands:
 ``docker run`` cria uma container
 
 ``-p 3000:3000`` libera a porta do container para que cada requisição de fora querendo acessar a porta 3000 o container possa ouvir também na porta 3000.
+ - lembrando que a porta da esquerda é a do **HOST** e a da direita é a do **CONTAINER**
+
 
 ``-d`` detach, ou seja, o terminal fica livre e o processo roda em background, porém exibe ID do container.
 
 ``tagname/tagnameexample`` nome da imagem que estou usando para criar o container.
+
+**docker run -p 80:80/tcp -p 80:80/udp**
+
+Podemos liberar portas TCP e UDP, por padrão, quando não é especificado /tcp ou /udp, é liberado a porta TCP.
 
 **docker stop ID**
 
